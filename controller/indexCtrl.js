@@ -2,7 +2,7 @@ var express = require ('express')
 var Comment = require('../models/comment');
 var trip = require('../models/trip');
 var User = require('../models/user');
-
+var passport = require('passport');
 module.exports = {
 
   landing : function(req, res){
