@@ -48,5 +48,5 @@ app.use('/trips/:id/comments', commentRoutes);
 
 
 app.listen(process.env.PORT || 4000, function(){
-   console.log("tulung.id sudah jalan di 4000!");
+   console.log("setrip.id sudah jalan di 4000!");
 });
