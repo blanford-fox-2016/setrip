@@ -1,0 +1,46 @@
+<% include ../partials/header %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <p class="lead">tulung.id</p>
+    </div>
+    <div class="col-md-9">
+      <div class="thumbnail">
+        <img class="image-responsive" src="<%= trip.image %>">
+        <div class="caption-full">
+          <h4><a><%=trip.name%></a></h4>
+          <p><%= trip.description %></p>
+          <p>
+          <em>Submitted By <%= trip.author.username %></em></p>
+          <a class="btn btn-warning" href="/trips/<%= trip._id %>/edit">Edit</a>
+
+          <form id="delete-form" action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+      <div class="well">
+        <div class="text-right">
+
+          <a class="btn btn-success" href='/trips/<%= trip._id %>/comments/new'>Add New Comments</a>
+        </div>
+        <hr>
+                  <% trip.comments.forEach(function(comment){ %>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <strong><%= comment.author.username %></strong>
+                      <p><%= comment.text %></p>
+                    </div>
+                   </div>
+
+          <% }) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<% include ../partials/footer %>

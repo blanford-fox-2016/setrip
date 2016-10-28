@@ -1,0 +1,18 @@
+{
+  "name": "tripper",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "broerjuang aji ryanandhaka tevinstein"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ryanandhaka/tripper",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/lib"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
