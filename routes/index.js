@@ -1,32 +1,18 @@
 var express = require('express');
 var router = express.Router();
+var trip = require('../models/trip');
 var passport = require('passport');
 var User = require('../models/user');
-
+var Controller = require ('../controller/indexCtrl')
 
 //Root Route
-router.get("/", function(req, res){
-    res.render("landing");
-});
+router.get("/",Controller.landing);
 
 
-router.get("/register", function(req, res) {
-  res.render("register");
-});
+router.get("/register",Controller.register);
 
 // Register Route
-router.post("/register", function(req, res) {
-  var newUser = new User({username: req.body.username});
-  User.register(newUser, req.body.password, function(err, user) {
-    if (err) {
-      console.log(err);
-      return res.render("register")
-    }
-    passport.authenticate("local")(req, res, function() {
-      res.redirect("/trips");
-    });
-  });
-});
+router.post("/register",Controller.registRoute);
 
 // Show login form
 router.get("/login", function(req, res) {
@@ -41,10 +27,7 @@ router.post("/login", passport.authenticate("local",
 });
 
 // logout route
-router.get("/logout", function(req, res) {
-  req.logout();
-  res.redirect("/trips");
-})
+router.get("/logout",Controller.logOut )
 
 function isLoggedIn(req, res, next) {
   if(req.isAuthenticated()) {
