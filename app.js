@@ -8,14 +8,13 @@ var express     = require("express"),
     trip  = require("./models/trip"),
     Comment     = require("./models/comment"),
     User        = require("./models/user")
-
 // Requiring Routes
 var commentRoutes     = require('./routes/comments'),
     tripRoutes  = require('./routes/trips'),
     indexRoutes        = require('./routes/index')
 
 // mongoose.connect("mongodb://localhost/yelp_camp_v3");
-mongoose.connect("mongodb://berbagi:qwerty@ds023105.mlab.com:23105/datas");
+mongoose.connect("mongodb://localhost/setrip");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -48,5 +47,5 @@ app.use('/trips/:id/comments', commentRoutes);
 
 
 app.listen(process.env.PORT || 4000, function(){
-   console.log("tulung.id sudah jalan di 4000!");
+   console.log("setript.id sudah jalan di 4000!");
 });

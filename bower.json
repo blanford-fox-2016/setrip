@@ -1,18 +1,19 @@
 {
-  "name": "tripper",
+  "name": "setrio",
   "description": "",
   "main": "index.js",
   "authors": [
-    "broerjuang aji ryanandhaka tevinstein"
+    "Aji Lantang Mardika & Juang Wiantoro & Ryan Andhaka <pair+ajilantang.broerjuang.ryanandhaka@hacktiv8.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/ryanandhaka/tripper",
+  "homepage": "https://github.com/blanford-fox-2016/setrip",
   "ignore": [
     "**/.*",
     "node_modules",
-    "public/lib"
+    "bower_components"
   ],
   "dependencies": {
+    "jquery": "1.9.1 - 3",
     "bootstrap": "^3.3.7"
   }
 }
