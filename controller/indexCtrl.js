@@ -37,7 +37,7 @@ module.exports = {
 
   logOut: function(req, res) {
     req.logout();
-    res.redirect("/trips");
+    res.redirect("/");
   }
 
 }
