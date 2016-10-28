@@ -1,5 +1,8 @@
 body {
   background: lightblue;
+  background-image: url('http://cdn.4alltravelers.com/wp-content/uploads/2015/09/road-trip-ftr.jpg');
+  background-size: cover;
+  text-align: center;
 }
 
 .thumbnail img {
