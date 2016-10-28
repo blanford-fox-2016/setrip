@@ -29,3 +29,14 @@ body {
   background-size: cover;
   text-align: center;
 }
+
+
+.login {
+  background-image: url('https://assets.entrepreneur.com/content/16x9/822/20150508170513-travel-nature-outdoor-hiking-walking-adventure.jpeg');
+  background-size: cover;
+}
+
+.register {
+  background-image: url('https://media.giphy.com/media/LRVnPYqM8DLag/giphy.gif');
+  background-size: cover;
+}
